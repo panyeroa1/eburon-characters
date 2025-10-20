@@ -1,0 +1,113 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+.persona-card {
+  background-color: var(--surface);
+  border-radius: var(--card-border-radius);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.persona-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+  border-color: var(--primary);
+}
+
+.persona-card.playing {
+  border-color: var(--secondary);
+  box-shadow: 0 0 15px rgba(3, 218, 198, 0.4);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.avatar-container {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-icon {
+  font-size: 28px;
+  color: var(--on-surface);
+}
+
+.text-content {
+  overflow: hidden;
+}
+
+.persona-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--on-surface);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.persona-tagline {
+  font-size: 0.9rem;
+  color: var(--on-background);
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.play-button {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  color: var(--secondary);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.play-button .icon {
+  font-size: 36px;
+  transition: transform 0.2s ease;
+}
+
+.play-button:hover .icon {
+  transform: scale(1.1);
+}
+
+.play-button:disabled {
+  cursor: not-allowed;
+}
+
+.play-button.error {
+  color: #cf6679; /* Material Design error color */
+}
+
+.play-button.error .icon {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}

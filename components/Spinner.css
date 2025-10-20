@@ -1,0 +1,18 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(3, 218, 198, 0.3);
+  border-top-color: var(--secondary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
